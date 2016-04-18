@@ -3,6 +3,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,11 +18,81 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Cd7-vJ-vON">
+                                <rect key="frame" x="20" y="35" width="560" height="420"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="kDL-aj-pCc">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="52"/>
+                                        <rect key="contentStretch" x="0.0" y="0.0" width="0.69999999999999996" height="1"/>
+                                        <segments>
+                                            <segment title="Weiblich"/>
+                                            <segment title="Männlich"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="changeGeschlecht:" destination="BYZ-38-t0r" eventType="valueChanged" id="YLW-43-m4d"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gewicht" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RoV-DK-5Bj">
+                                        <rect key="frame" x="0.0" y="61" width="560" height="52"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="80" minValue="0.0" maxValue="150" translatesAutoresizingMaskIntoConstraints="NO" id="O2e-eu-rq3">
+                                        <rect key="frame" x="-2" y="123" width="564" height="52"/>
+                                        <connections>
+                                            <action selector="changeGewicht:" destination="BYZ-38-t0r" eventType="valueChanged" id="SUX-Nb-hGY"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Größe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r1f-MM-arD">
+                                        <rect key="frame" x="0.0" y="184" width="560" height="52"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="175" minValue="0.0" maxValue="220" translatesAutoresizingMaskIntoConstraints="NO" id="2Cc-CL-KJw">
+                                        <rect key="frame" x="-2" y="246" width="564" height="52"/>
+                                        <connections>
+                                            <action selector="changeGroesse:" destination="BYZ-38-t0r" eventType="valueChanged" id="a52-YB-KXG"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rq7-gX-q2y">
+                                        <rect key="frame" x="0.0" y="307" width="560" height="52"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="60"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LoB-CT-hvP">
+                                        <rect key="frame" x="0.0" y="369" width="560" height="51"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Cd7-vJ-vON" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="8om-UM-55a"/>
+                            <constraint firstItem="Cd7-vJ-vON" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="35" id="ZhW-Si-YiJ"/>
+                            <constraint firstItem="Cd7-vJ-vON" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.7" id="ids-X6-kIw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Cd7-vJ-vON" secondAttribute="trailing" id="wPg-uk-zwt"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="labelBMI" destination="Rq7-gX-q2y" id="3ek-Kv-NAT"/>
+                        <outlet property="labelGewicht" destination="RoV-DK-5Bj" id="V1m-oO-3Xe"/>
+                        <outlet property="labelGröße" destination="r1f-MM-arD" id="gCA-4s-18m"/>
+                        <outlet property="labelOpt" destination="LoB-CT-hvP" id="AwD-nM-cIx"/>
+                        <outlet property="radioGeschlecht" destination="kDL-aj-pCc" id="h6b-NB-O6r"/>
+                        <outlet property="sliderGewicht" destination="O2e-eu-rq3" id="h8U-SZ-dpL"/>
+                        <outlet property="sliderGröße" destination="2Cc-CL-KJw" id="2QW-UE-sxr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="565" y="490"/>
         </scene>
     </scenes>
 </document>
