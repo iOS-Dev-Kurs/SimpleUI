@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var kl: UILabel!
     @IBOutlet weak var bg: UILabel!
     
-    @IBAction func rgb(sender: AnyObject) {
+    func rgb() {
         let r = rs.value / 2.55
         let g = gs.value / 2.55
         let b = bs.value / 2.55
@@ -37,7 +37,7 @@ class ViewController: UIViewController {
         renewUI()
     }
     
-    @IBAction func cmyk(sender: AnyObject) {
+    func cmyk() {
         let c = cs.value / 100
         let m = ms.value / 100
         let y = ys.value / 100
@@ -48,7 +48,7 @@ class ViewController: UIViewController {
         renewUI()
     }
     
-    func renewUI () {
+    func renewUI() {
         bg.backgroundColor = UIColor(red: CGFloat(rs.value / 255), green: CGFloat(gs.value / 255), blue: CGFloat(bs.value / 255), alpha: 1)
         rl.text = "Red: \(Int(rs.value))"
         gl.text = "Green: \(Int(gs.value))"
@@ -59,5 +59,27 @@ class ViewController: UIViewController {
         kl.text = "Black: \(Int(ks.value))"
     }
     
+    
+    @IBAction func red(sender: AnyObject) {
+        rgb()
+    }
+    @IBAction func green(sender: AnyObject) {
+        rgb()
+    }
+    @IBAction func blue(sender: AnyObject) {
+        rgb()
+    }
+    @IBAction func cyan(sender: AnyObject) {
+        cmyk()
+    }
+    @IBAction func magenta(sender: AnyObject) {
+        cmyk()
+    }
+    @IBAction func yellow(sender: AnyObject) {
+        cmyk()
+    }
+    @IBAction func black(sender: AnyObject) {
+        cmyk()
+    }
 }
 

@@ -25,91 +25,110 @@
                                     <constraint firstAttribute="height" constant="100" id="Txw-FE-esY"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="127" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="paO-ZH-pfv">
-                                <rect key="frame" x="28" y="30" width="118" height="31"/>
+                                <rect key="frame" x="18" y="49" width="118" height="31"/>
+                                <connections>
+                                    <action selector="red:" destination="BYZ-38-t0r" eventType="valueChanged" id="Brw-8h-Bw2"/>
+                                </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="127" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="zGx-iA-3UP">
-                                <rect key="frame" x="28" y="68" width="118" height="31"/>
+                                <rect key="frame" x="18" y="87" width="118" height="31"/>
+                                <connections>
+                                    <action selector="green:" destination="BYZ-38-t0r" eventType="valueChanged" id="chc-pk-JOt"/>
+                                </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="127" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="cL1-Gu-Swa">
-                                <rect key="frame" x="28" y="106" width="118" height="31"/>
+                                <rect key="frame" x="18" y="125" width="118" height="31"/>
+                                <connections>
+                                    <action selector="blue:" destination="BYZ-38-t0r" eventType="valueChanged" id="IuW-lx-EPx"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Red: 127" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g2O-52-vPy">
-                                <rect key="frame" x="160" y="34" width="150" height="21"/>
+                                <rect key="frame" x="150" y="53" width="120" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Green: 127" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VoC-Zg-xej">
-                                <rect key="frame" x="160" y="72" width="150" height="21"/>
+                                <rect key="frame" x="150" y="91" width="120" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Blue: 127" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8a-CC-RCA">
-                                <rect key="frame" x="160" y="110" width="150" height="21"/>
+                                <rect key="frame" x="150" y="129" width="120" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Hej-Ep-2QX">
-                                <rect key="frame" x="28" y="182" width="118" height="31"/>
+                                <rect key="frame" x="18" y="201" width="118" height="31"/>
+                                <connections>
+                                    <action selector="cyan:" destination="BYZ-38-t0r" eventType="valueChanged" id="SNs-U4-4ZX"/>
+                                </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Udl-HI-nKg">
-                                <rect key="frame" x="28" y="220" width="118" height="31"/>
+                                <rect key="frame" x="18" y="239" width="118" height="31"/>
+                                <connections>
+                                    <action selector="magenta:" destination="BYZ-38-t0r" eventType="valueChanged" id="fEz-xX-trI"/>
+                                </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="YrQ-er-GIL">
-                                <rect key="frame" x="28" y="258" width="118" height="31"/>
+                                <rect key="frame" x="18" y="277" width="118" height="31"/>
+                                <connections>
+                                    <action selector="yellow:" destination="BYZ-38-t0r" eventType="valueChanged" id="4v7-Ku-CE3"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cyan: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CPh-ds-HjL">
-                                <rect key="frame" x="160" y="185" width="150" height="21"/>
+                                <rect key="frame" x="150" y="204" width="120" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Magenta: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8xA-ML-Fk2">
-                                <rect key="frame" x="160" y="223" width="150" height="21"/>
+                                <rect key="frame" x="150" y="242" width="120" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="oGS-eO-vGK">
-                                <rect key="frame" x="28" y="296" width="118" height="31"/>
+                                <rect key="frame" x="18" y="315" width="118" height="31"/>
+                                <connections>
+                                    <action selector="black:" destination="BYZ-38-t0r" eventType="valueChanged" id="d9e-7g-koW"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Black: 50" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uLs-y7-0jd">
-                                <rect key="frame" x="160" y="298" width="150" height="21"/>
+                                <rect key="frame" x="150" y="317" width="120" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zro-Jx-jlx">
-                                <rect key="frame" x="30" y="144" width="134" height="30"/>
-                                <state key="normal" title="Calculate from RGB"/>
-                                <connections>
-                                    <action selector="rgb:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ilS-0K-j7f"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Yellow: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V3a-Pr-eql">
-                                <rect key="frame" x="160" y="262" width="150" height="21"/>
+                                <rect key="frame" x="150" y="281" width="120" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b93-hn-X4l">
-                                <rect key="frame" x="30" y="334" width="147" height="30"/>
-                                <state key="normal" title="Calculate from CMYK"/>
-                                <connections>
-                                    <action selector="cmyk:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dQZ-eQ-W3S"/>
-                                </connections>
-                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright © 2016 Marvin Ruder. All rights reserved. " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dGH-wL-W9M">
+                                <rect key="frame" x="20" y="471" width="560" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="e33-WA-goj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="10"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="dGH-wL-W9M" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="FPr-G4-wL1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="g46-pm-zzd" secondAttribute="trailing" constant="-20" id="RU5-DF-UZf"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="g46-pm-zzd" secondAttribute="bottom" id="Ztc-oJ-qTz"/>
+                            <constraint firstItem="g46-pm-zzd" firstAttribute="top" secondItem="dGH-wL-W9M" secondAttribute="bottom" constant="8" symbolic="YES" id="cWR-Pv-b2x"/>
+                            <constraint firstItem="dGH-wL-W9M" firstAttribute="centerX" secondItem="g46-pm-zzd" secondAttribute="centerX" id="dsJ-EX-aJC"/>
                             <constraint firstItem="g46-pm-zzd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="sz1-uZ-WRr"/>
                         </constraints>
                     </view>
@@ -133,7 +152,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="248" y="354"/>
+            <point key="canvasLocation" x="236" y="374"/>
         </scene>
     </scenes>
 </document>
