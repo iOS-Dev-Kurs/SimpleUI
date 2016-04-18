@@ -22,73 +22,73 @@ Implement one of the following examples or an idea of your own. I look forward t
 
 - The attribute `text` of `UILabel` and `UITextField` return an _optional_ `String?`. Use the _optional binding_ syntax to unpack the optional:
 
-```swift
-if let name = nameTextfield.text {
-    // name exists and can be used here
-} else {
-    // nameTextfield.text does not have a value
-}
-```
+	```swift
+	if let name = nameTextfield.text {
+	    // name exists and can be used here
+	} else {
+	    // nameTextfield.text does not have a value
+	}
+	```
 
 - You can quickly convert a `String` to a number using the _Initializers_ `Int()` or `Double()`. This can fail, so again an _optional_ is returned that you need to unpack:
 
-```swift
-// text is a String
-if let number = Double(text) {
-   // successfully converted text to a decimal number
-}
-```
+	```swift
+	// text is a String
+	if let number = Double(text) {
+	   // successfully converted text to a decimal number
+	}
+	```
 
 - Define an attribute such as `var count: Int` with a default value:
 
-```swift
-class ViewController: UIViewController {
+	```swift
+	class ViewController: UIViewController {
 
-    var count: Int = 0
+	    var count: Int = 0
 	
-	// ...
+		// ...
 
-}
-```
+	}
+	```
 
 - Of course Swift provides the basic calculation operators `+-*/`. These can be used in conjunction with setting a new value, e.g. to increase the value of a variable `count` by `1`:
 
-```swift
-count += 1
-```
+	```swift
+	count += 1
+	```
 
 - A color is represented by `UIColor`. The Initializer `UIColor(red:green:blue:alpha:)` accepts values from `0` to `1`:
 
-```swift
-let color = UIColor(red: 1, green: 0, blue: 0, alpha: 1) // red
-```
+	```swift
+	let color = UIColor(red: 1, green: 0, blue: 0, alpha: 1) // red
+	```
 
 - The function `arc4random_uniform(n)` returns pseudo random numbers `x` with `0 <= x < n`.
 
 - When a `UISwitch` is tapped by the user it emits an Event `UIControlEvent.ValueChanged`, very similar to a `UIButton`. With an attribute `var: randomTimer: NSTimer?` we can implement a method for randomly changing the background color:
 
-```swift
-var randomTimer: NSTimer?
+	```swift
+	var randomTimer: NSTimer?
 
-@IBAction func switchValueChanged(sender: UISwitch) {
-	if sender.on {
-		randomTimer = NSTimer.scheduledTimerWithTimeInterval(0.15, target: self, selector: "randomButtonPressed:", userInfo: nil, repeats:true)
-    } else {
-        randomTimer?.invalidate()
-        randomTimer = nil
+	@IBAction func switchValueChanged(sender: UISwitch) {
+		if sender.on {
+			randomTimer = NSTimer.scheduledTimerWithTimeInterval(0.15, target: self, selector: "randomButtonPressed:", userInfo: nil, repeats:true)
+	    } else {
+	        randomTimer?.invalidate()
+	        randomTimer = nil
+		}
 	}
-}
-```
+	```
 
-This periodically calls the method `randomButtonPressed(_:) that must also be implemented.`
+	This periodically calls the method `randomButtonPressed(_:) that must also be implemented.`
 
 
 ## Hall of Fame
 
-- [Max, SS 2016]:
+- [Max, SS 2016](https://github.com/max-simon/SimpleUI):
 
-![Max, SS 2016](https://ios-dev-kurs.github.io/halloffame/simpleui/ss2016_max.png)
+	![Max, SS 2016](https://ios-dev-kurs.github.io/halloffame/simpleui/ss2016_max.png)
 
-- [Max, SS 2016]:
+- [Marvin, SS 2016](https://github.com/marvinruder/SimpleUI):
 
-![Marvin, SS 2016](https://ios-dev-kurs.github.io/halloffame/simpleui/ss2016_marvin.png)
+	![Marvin, SS 2016](https://ios-dev-kurs.github.io/halloffame/simpleui/ss2016_marvin.png)
