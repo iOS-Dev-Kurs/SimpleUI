@@ -1,4 +1,4 @@
-iOS Development Course | Heidelberg University | [Nils Fischer](https://github.com/knly) | ios-dev-kurs.github.io
+iOS Development Course | Heidelberg University | [Nils Fischer](https://github.com/knly) | [ios-dev-kurs.github.io](ios-dev-kurs.github.io)
 
 For detailed instructions in German see the [App Katalog](https://github.com/ios-dev-kurs/skript).
 
@@ -81,3 +81,14 @@ var randomTimer: NSTimer?
 ```
 
 This periodically calls the method `randomButtonPressed(_:) that must also be implemented.`
+
+
+## Hall of Fame
+
+- [Max, SS 2016]:
+
+![Max, SS 2016](https://ios-dev-kurs.github.io/halloffame/simpleui/ss2016_max.png)
+
+- [Max, SS 2016]:
+
+![Marvin, SS 2016](https://ios-dev-kurs.github.io/halloffame/simpleui/ss2016_marvin.png)
