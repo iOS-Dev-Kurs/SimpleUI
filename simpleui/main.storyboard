@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F18c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,11 +17,107 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="tV9-1v-TIm">
+                                <rect key="frame" x="47" y="100" width="51" height="128"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Rot-Anteil" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DeD-Bz-jLJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="51" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Blau-Anteil" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6pO-5o-Fg6">
+                                        <rect key="frame" x="0.0" y="54" width="51" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Grün-Anteil" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I5I-gA-Nhn">
+                                        <rect key="frame" x="0.0" y="108" width="51" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Io3-d6-2k0">
+                                <rect key="frame" x="207" y="285" width="187" height="30"/>
+                                <state key="normal" title="Hintergrundfarbe wechseln"/>
+                                <connections>
+                                    <action selector="changeBackChosen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KgR-Kl-NYH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8bA-3Y-puS">
+                                <rect key="frame" x="210" y="450" width="180" height="30"/>
+                                <state key="normal" title="zufällige Hintergrundfarbe"/>
+                                <connections>
+                                    <action selector="changeBackRandom:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bRh-qw-YIY"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="S6Z-H0-gvL">
+                                <rect key="frame" x="170" y="100" width="438" height="128"/>
+                                <subviews>
+                                    <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="1LU-rb-Ttl">
+                                        <rect key="frame" x="-2" y="0.0" width="442" height="31"/>
+                                        <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="sliderRedChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="VFp-Sc-xrI"/>
+                                        </connections>
+                                    </slider>
+                                    <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ig3-mD-dSt">
+                                        <rect key="frame" x="-2" y="49" width="442" height="31"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="sliderblueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="b1W-kY-beW"/>
+                                        </connections>
+                                    </slider>
+                                    <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="dIq-C6-zt8">
+                                        <rect key="frame" x="-2" y="98" width="442" height="31"/>
+                                        <color key="tintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="sliderGreenChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Kbx-ss-me4"/>
+                                        </connections>
+                                    </slider>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="S6Z-H0-gvL" firstAttribute="leading" secondItem="tV9-1v-TIm" secondAttribute="trailing" constant="34" id="D6s-OO-XIN"/>
+                            <constraint firstItem="tV9-1v-TIm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="27" id="IUc-na-LWC"/>
+                            <constraint firstItem="Io3-d6-2k0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="JlO-x4-yYr"/>
+                            <constraint firstItem="Io3-d6-2k0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qq8-JI-HCW"/>
+                            <constraint firstItem="8bA-3Y-puS" firstAttribute="top" secondItem="Io3-d6-2k0" secondAttribute="bottom" constant="135" id="SaT-Lc-L4D"/>
+                            <constraint firstItem="tV9-1v-TIm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="47" id="TKm-Fk-b0I"/>
+                            <constraint firstItem="S6Z-H0-gvL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="80" id="V7J-sp-Wiw"/>
+                            <constraint firstItem="Io3-d6-2k0" firstAttribute="top" secondItem="S6Z-H0-gvL" secondAttribute="bottom" constant="57" id="XJN-KN-CqF"/>
+                            <constraint firstItem="8bA-3Y-puS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ZeR-Ek-VQR"/>
+                            <constraint firstItem="tV9-1v-TIm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="fC7-sc-r8m"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="S6Z-H0-gvL" secondAttribute="trailing" constant="10" id="hYg-FL-qyF"/>
+                            <constraint firstItem="tV9-1v-TIm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="80" id="iiv-Vp-0eZ"/>
+                            <constraint firstItem="tV9-1v-TIm" firstAttribute="height" secondItem="S6Z-H0-gvL" secondAttribute="height" id="rTu-FA-b9A"/>
+                            <constraint firstItem="8bA-3Y-puS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tgx-pQ-OZf"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="TKm-Fk-b0I"/>
+                                <exclude reference="fC7-sc-r8m"/>
+                                <exclude reference="ZeR-Ek-VQR"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="buttonBackChosen" destination="Io3-d6-2k0" id="K7g-Wa-fZp"/>
+                        <outlet property="buttonBackRandom" destination="8bA-3Y-puS" id="l11-VY-VcF"/>
+                        <outlet property="sliderBlau" destination="ig3-mD-dSt" id="quR-rH-UaC"/>
+                        <outlet property="sliderGrün" destination="dIq-C6-zt8" id="r4A-Lj-smO"/>
+                        <outlet property="sliderRot" destination="1LU-rb-Ttl" id="M2o-Rt-EfX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="245" y="349"/>
         </scene>
     </scenes>
 </document>
