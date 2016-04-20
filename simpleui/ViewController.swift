@@ -10,28 +10,33 @@ import UIKit
 
 class ViewController: UIViewController {
     var count: Int = 0
-    var bmi: Float = 0
+    
+    func update_labe_counter () {
+        counter_label.text = String(count)
+    }
     
     @IBOutlet var counter_label: UILabel!
     
     
     @IBAction func plus_one(sender: AnyObject) {
         count += 1
-        counter_label.text = String(count)
+        update_labe_counter ()
     }
 
     
     @IBAction func reset_label(sender: AnyObject) {
         count = 0
-        counter_label.text = String(count)
+        update_labe_counter ()
  
     }
     
     @IBAction func minus_one(sender: AnyObject) {
         count -= 1
-        counter_label.text = String(count)
+        update_labe_counter ()
 
     }
+    
+    var bmi: Float = 0
     
     
     @IBOutlet weak var gewicht_label: UILabel!
@@ -39,7 +44,7 @@ class ViewController: UIViewController {
     @IBAction func gewicht_slider(sender: AnyObject) {
         gewicht_label.text = "Dein Gewicht: \(gewicht_slider.value)"
         bmi = gewicht_slider.value/(laenge_slider.value*laenge_slider.value)
-        bmi_label.text = "Dein BMI: \(bmi)"
+        bmi_label.text = "Dein BMI: \(bmi)kg"
     }
     
     
@@ -48,7 +53,7 @@ class ViewController: UIViewController {
     @IBAction func laenge_slider_change(sender: AnyObject) {
         laenge_label.text = "Deine Größe: \(laenge_slider.value)"
         bmi = gewicht_slider.value/(laenge_slider.value*laenge_slider.value)
-        bmi_label.text = "Dein BMI: \(bmi)"
+        bmi_label.text = "Dein BMI: \(bmi)cm"
     }
     
     
