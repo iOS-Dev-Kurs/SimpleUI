@@ -9,6 +9,24 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var setColorLabel: UILabel!
+    
+    @IBOutlet weak var setColorTextfield: UITextField!
+   
+    @IBAction func setColorButton(sender: AnyObject) {
+        if let color = setColorTextfield.text {
+            if color == "Grün" {
+                self.view.backgroundColor = UIColor.greenColor()
+            } else {
+                self.view.backgroundColor = UIColor.blackColor()
+            }
+        }
+        
+        
+    }
+    
+    
 
 }
 
