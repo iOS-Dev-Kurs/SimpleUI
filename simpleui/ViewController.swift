@@ -20,35 +20,36 @@ class ViewController: UIViewController {
     
     @IBAction func increasingButtonPressed(sender: UIButton){
         count += 1
-        numberLabel.text = String(count)
+        updateLabel()
         
     }
     
     @IBAction func decreasingButtonPressed(sender: UIButton){
         count -= 1
-        numberLabel.text = String(count)
+        updateLabel()
     }
 
     
     @IBAction func resetButtonPressed(sender: UIButton){
         count = 0
-        numberLabel.text = String(count)
+        updateLabel()
     }
 
     
     
     
-    //@IBOutlet var nameTextfield: UITextField!
-    //@IBOutlet var greetingLabel: UILabel!
-    
-    //@IBAction func greetingButtonPressed(sender: UIButton){
-      //  if let name = nameTextfield.text where !name.isEmpty{
-        //    greetingLabel.text = "Hello \(name)!"
-        //}else{
-      //      greetingLabel.text="Hello World!"
-        //}
+    func updateLabel() {
+        if let text = String(count){
         
-    //}
-
+            numberLabel.text = "\(text)"
+        }
+        
+    }
+        
+        
+    
+    
+    
+   
 }
 
