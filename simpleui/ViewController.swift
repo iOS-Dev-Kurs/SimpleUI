@@ -16,18 +16,11 @@ class ViewController: UIViewController {
 
     
     @IBAction func BMIButtonPressed(sender: AnyObject) {
-        if let mass = massTextField.text {
-            if let height = heightTextField.text{
-                let ma = Double(mass)
-                let hei = Double(height)
-                let BMI = ma! / (hei!*hei!)
+        if let mass = massTextField.text ,height = heightTextField.text, ma = Double(mass), hei = Double(height){
+                let BMI = round((ma / (hei*hei))*10)/10
                 BMILabel.text = "Your BMI: \(BMI)"
-            }else{
-                BMILabel.text = "Your BMI: failure:your too fat;)"
-            }
-
         }else{
-            BMILabel.text = "Your BMI: failure:your too fat;)"
+            BMILabel.text = "Your BMI: failure"
         }
     }
 }
