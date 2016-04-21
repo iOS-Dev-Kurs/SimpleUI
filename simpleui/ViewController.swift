@@ -9,6 +9,45 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    
+    var count: Int = 0
+    //Variable mit Startwert 0 deklarieren
+    
+    @IBOutlet var numberLabel: UILabel!
+    
+    
+    
+    @IBAction func increasingButtonPressed(sender: UIButton){
+        count += 1
+        updateLabel()
+        
+    }
+    
+    @IBAction func decreasingButtonPressed(sender: UIButton){
+        count -= 1
+        updateLabel()
+    }
 
+    
+    @IBAction func resetButtonPressed(sender: UIButton){
+        count = 0
+        updateLabel()
+    }
+
+    
+    
+    
+    func updateLabel() {
+        
+        numberLabel.text = String(count)
+        
+    }
+        
+        
+    
+    
+    
+   
 }
 
