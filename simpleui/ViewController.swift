@@ -12,21 +12,28 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var setColorLabel: UILabel!
     
-    @IBOutlet weak var setColorTextfield: UITextField!
-   
-    @IBAction func setColorButton(sender: AnyObject) {
-        if let color = setColorTextfield.text {
-            if color == "Grün" {
-                self.view.backgroundColor = UIColor.greenColor()
-            } else {
-                self.view.backgroundColor = UIColor.blackColor()
-            }
+    @IBOutlet weak var redLabel: UILabel!
+    @IBOutlet weak var redTextfield: UITextField!
+    
+    @IBOutlet weak var greenLabel: UILabel!
+    @IBOutlet weak var greenTextfield: UITextField!
+    @IBOutlet weak var blueLabel: UILabel!
+    @IBOutlet weak var blueTextfield: UITextField!
+    
+    @IBAction func redTextfieldEntered(sender: AnyObject) {
         }
-        
+    }
+    @IBAction func setColorButton(sender: AnyObject) {
+        if le {
+        }
+        if redTextfield.text != nil {
+            blue = blueTextfield.text
+        }
+        if greenTextfield.text !=nil {
+            
+        }
         
     }
     
-    
-
 }
 
