@@ -55,6 +55,9 @@
                             <constraint firstAttribute="trailingMargin" secondItem="dWL-il-SZS" secondAttribute="trailing" id="neY-Mg-z98"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="numberLabel" destination="dWL-il-SZS" id="z2B-Sk-L5c"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

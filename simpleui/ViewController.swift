@@ -39,10 +39,8 @@ class ViewController: UIViewController {
     
     
     func updateLabel() {
-        if let text = String(count){
         
-            numberLabel.text = "\(text)"
-        }
+        numberLabel.text = String(count)
         
     }
         
