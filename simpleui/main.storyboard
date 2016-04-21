@@ -36,7 +36,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rMb-wS-Dak">
-                                <rect key="frame" x="502" y="69" width="40" height="30"/>
+                                <rect key="frame" x="276" y="125" width="40" height="30"/>
                                 <state key="normal" title="Reset">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -57,13 +57,13 @@
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dein Gewicht: 65kg" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dvc-gl-xbr">
-                                <rect key="frame" x="53" y="190" width="150" height="51"/>
+                                <rect key="frame" x="53" y="190" width="204" height="51"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Deine Größe: 150cm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t9r-he-nsc">
-                                <rect key="frame" x="53" y="270" width="157" height="35"/>
+                                <rect key="frame" x="53" y="270" width="204" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -75,23 +75,67 @@
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dein BMI:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ldg-r4-vRN">
-                                <rect key="frame" x="53" y="370" width="76" height="21"/>
+                                <rect key="frame" x="53" y="370" width="204" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rot" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Il-tg-PPY">
+                                <rect key="frame" x="66" y="432" width="26" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Grün" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gue-HV-th7">
+                                <rect key="frame" x="60" y="461" width="38" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Blau" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SMO-KE-1GQ">
+                                <rect key="frame" x="62" y="490" width="34" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="kFL-Tk-qdR">
+                                <rect key="frame" x="158" y="428" width="118" height="31"/>
+                                <connections>
+                                    <action selector="change_red:" destination="BYZ-38-t0r" eventType="valueChanged" id="An3-FZ-maS"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="150" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="vE5-f1-1Tv">
+                                <rect key="frame" x="158" y="457" width="118" height="31"/>
+                                <connections>
+                                    <action selector="change_green:" destination="BYZ-38-t0r" eventType="valueChanged" id="wdb-ap-8eM"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="100" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="DxQ-XU-rZd">
+                                <rect key="frame" x="158" y="486" width="118" height="31"/>
+                                <connections>
+                                    <action selector="change_blue:" destination="BYZ-38-t0r" eventType="valueChanged" id="WgQ-I4-M2z"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zTR-Yb-AQS">
+                                <rect key="frame" x="42" y="524" width="86" height="30"/>
+                                <state key="normal" title="Automatisch"/>
+                                <connections>
+                                    <action selector="change_color_random:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KAg-BI-vgd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="bmi_label" destination="ldg-r4-vRN" id="NMq-ys-Bzp"/>
-                        <outlet property="button_minus_eins" destination="ChT-4T-rtT" id="b0Z-aC-tlC"/>
-                        <outlet property="button_plus_eins" destination="7pZ-fo-JIC" id="dkw-RK-rxQ"/>
                         <outlet property="counter_label" destination="Cr5-MM-qWm" id="rVe-vg-4rz"/>
                         <outlet property="gewicht_label" destination="Dvc-gl-xbr" id="5qN-SO-8Ny"/>
                         <outlet property="gewicht_slider" destination="WI6-fZ-g2a" id="CJU-U3-WMo"/>
                         <outlet property="laenge_label" destination="t9r-he-nsc" id="QpF-rV-R9i"/>
                         <outlet property="laenge_slider" destination="lhi-hp-99k" id="BPq-b2-AVY"/>
+                        <outlet property="slider_blue" destination="DxQ-XU-rZd" id="xv1-BS-JDx"/>
+                        <outlet property="slider_green" destination="vE5-f1-1Tv" id="6ih-6D-xiT"/>
+                        <outlet property="slider_red" destination="kFL-Tk-qdR" id="yCV-pm-xfL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
