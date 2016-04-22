@@ -10,5 +10,24 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var count: Int = 0
+    @IBOutlet var counterLabel: UILabel!
+    
+    @IBAction func addButton(sender: UIButton) {
+        count += 1
+        counterLabel.text = String(count)
+    }
+    
+    @IBAction func subButton(sender: UIButton) {
+        count -= 1
+        counterLabel.text = String(count)
+    }
+        
+    @IBAction func resetButton(sender: AnyObject) {
+        count = 0
+        counterLabel.text = String(count)
+    }
+    
+    
 }
 
