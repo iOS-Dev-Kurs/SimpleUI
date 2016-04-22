@@ -9,26 +9,18 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    //counter
     var count: Int = 0
-    var color: UIColor?
+    @IBOutlet var counter_label: UILabel!
     
     func update_labe_counter () {
         counter_label.text = String(count)
     }
     
-    @IBOutlet var counter_label: UILabel!
-    
-    
     @IBAction func plus_one(sender: AnyObject) {
         count += 1
         update_labe_counter ()
-    }
-
-    
-    @IBAction func reset_label(sender: AnyObject) {
-        count = 0
-        update_labe_counter ()
- 
     }
     
     @IBAction func minus_one(sender: AnyObject) {
@@ -37,28 +29,42 @@ class ViewController: UIViewController {
 
     }
     
-    var bmi: Float = 0
+     @IBAction func reset_label(sender: AnyObject) {
+        count = 0
+        update_labe_counter ()
+    }
+   
     
+    //BMI
+    var bmi: Float = 0
     
     @IBOutlet weak var gewicht_label: UILabel!
     @IBOutlet weak var gewicht_slider: UISlider!
-    @IBAction func gewicht_slider(sender: AnyObject) {
-        gewicht_label.text = String(format: "Dein Gewicht: %.1f kg", gewicht_slider.value)
-        bmi = gewicht_slider.value/(laenge_slider.value*laenge_slider.value)*10000
-        bmi_label.text = String(format: "Dein BMI: %.2f", bmi)
-    }
-    
     
     @IBOutlet weak var laenge_label: UILabel!
     @IBOutlet weak var laenge_slider: UISlider!
+    
+    @IBOutlet weak var bmi_label: UILabel!
+    
+    @IBAction func gewicht_slider(sender: AnyObject) {
+        //update gewicht label
+        gewicht_label.text = String(format: "Dein Gewicht: %.1f kg", gewicht_slider.value)
+        //update bmi
+        bmi = gewicht_slider.value/(laenge_slider.value*laenge_slider.value)*10000
+        bmi_label.text = String(format: "Dein BMI: %.2f", bmi)
+    }
+    
     @IBAction func laenge_slider_change(sender: AnyObject) {
+        //update größe label
         laenge_label.text = String(format: "Deine Größe: %.1f cm", laenge_slider.value)
+        //update bmi
         bmi = gewicht_slider.value/(laenge_slider.value*laenge_slider.value)*10000
         bmi_label.text = String(format: "Dein BMI: %.2f", bmi)
     }
     
     
-    @IBOutlet weak var bmi_label: UILabel!
+    //Change Background color
+    var color: UIColor?
     
     @IBOutlet weak var slider_red: UISlider!
     @IBOutlet weak var slider_green: UISlider!
@@ -68,7 +74,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var green_value: UILabel!
     @IBOutlet weak var blue_value: UILabel!
     
-    
+    //change manualy
     func chance_color () {
         let r = CGFloat(slider_red.value/255)
         let g = CGFloat(slider_green.value/255)
@@ -94,6 +100,7 @@ class ViewController: UIViewController {
         blue_value.text = "\(Int(sender.value))"
     }
     
+    //change automaticly
     func change_color_random () {
         let r =  CGFloat(arc4random_uniform(255))/255
         let g =  CGFloat(arc4random_uniform(255))/255
@@ -109,16 +116,30 @@ class ViewController: UIViewController {
         green_value.text = "\(Int(g*255))"
         blue_value.text = "\(Int(b*255))"
     }
+    
     @IBAction func change_color_random(sender: AnyObject) {
         change_color_random ()
     }
+    var interval: Float = 0
     var randomTimer: NSTimer?
     @IBAction func switch_auto_color(sender: UISwitch) {
         if sender.on {
-            randomTimer = NSTimer.scheduledTimerWithTimeInterval(0.35, target: self, selector: "change_color_random", userInfo: nil, repeats:true)
+            interval = round(change_speed_slider.value*100)/100
+            print(interval)
+            randomTimer = NSTimer.scheduledTimerWithTimeInterval(Double(interval), target: self, selector: "change_color_random", userInfo: nil, repeats:true)
         } else {
             randomTimer?.invalidate()
             randomTimer = nil
         }
+    }
+    
+    @IBOutlet weak var speed_label: UILabel!
+    @IBOutlet weak var change_speed_slider: UISlider!
+    
+    @IBAction func change_speed(sender: UISlider) {
+        interval = round(change_speed_slider.value*100)/100
+        randomTimer?.invalidate()
+        randomTimer = NSTimer.scheduledTimerWithTimeInterval(Double(interval), target: self, selector: "change_color_random", userInfo: nil, repeats:true)
+        speed_label.text = String(format: "%.2f s", sender.value)
     }
 }

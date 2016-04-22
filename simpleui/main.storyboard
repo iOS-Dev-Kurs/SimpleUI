@@ -28,9 +28,10 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ChT-4T-rtT">
                                 <rect key="frame" x="42" y="66" width="30" height="30"/>
-                                <state key="normal" title="-1">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                                <state key="normal" title="-1"/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="46" y="70" width="22" height="22"/>
+                                </variation>
                                 <connections>
                                     <action selector="minus_one:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PGs-35-d1n"/>
                                 </connections>
@@ -47,13 +48,7 @@
                                     <action selector="gewicht_slider:" destination="BYZ-38-t0r" eventType="valueChanged" id="hB0-aD-dmD"/>
                                 </connections>
                             </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dein Gewicht: 65kg" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dvc-gl-xbr">
-                                <rect key="frame" x="53" y="190" width="204" height="51"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Deine Größe: 150cm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t9r-he-nsc">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Deine Größe: 150 cm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t9r-he-nsc">
                                 <rect key="frame" x="53" y="270" width="204" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -101,6 +96,15 @@
                                     <rect key="frame" x="62" y="549" width="34" height="21"/>
                                 </variation>
                             </label>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="kFL-Tk-qdR">
+                                <rect key="frame" x="158" y="428" width="118" height="31"/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="158" y="487" width="165" height="31"/>
+                                </variation>
+                                <connections>
+                                    <action selector="change_red:" destination="BYZ-38-t0r" eventType="valueChanged" id="An3-FZ-maS"/>
+                                </connections>
+                            </slider>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="150" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="vE5-f1-1Tv">
                                 <rect key="frame" x="158" y="457" width="118" height="31"/>
                                 <variation key="heightClass=regular" fixedFrame="YES">
@@ -183,15 +187,39 @@
                                     <rect key="frame" x="342" y="549" width="39" height="21"/>
                                 </variation>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="kFL-Tk-qdR">
-                                <rect key="frame" x="158" y="428" width="118" height="31"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Geschwindigkeit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GQX-KX-fq0">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="158" y="487" width="165" height="31"/>
+                                    <rect key="frame" x="42" y="621" width="126" height="21"/>
+                                </variation>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.29999999999999999" minValue="0.01" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="5aJ-4i-XfB">
+                                <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="181" y="617" width="142" height="31"/>
                                 </variation>
                                 <connections>
-                                    <action selector="change_red:" destination="BYZ-38-t0r" eventType="valueChanged" id="An3-FZ-maS"/>
+                                    <action selector="change_speed:" destination="BYZ-38-t0r" eventType="valueChanged" id="ZY4-sK-GKt"/>
                                 </connections>
                             </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.3s" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nhq-3H-2ra">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="338" y="617" width="49" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dein Gewicht: 65 kg" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dvc-gl-xbr">
+                                <rect key="frame" x="53" y="190" width="204" height="51"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -200,6 +228,9 @@
                                 <exclude reference="NNb-1f-Lc3"/>
                                 <exclude reference="0Tf-Qt-TZu"/>
                                 <exclude reference="79q-xH-W35"/>
+                                <exclude reference="GQX-KX-fq0"/>
+                                <exclude reference="5aJ-4i-XfB"/>
+                                <exclude reference="nhq-3H-2ra"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
@@ -208,12 +239,16 @@
                                 <include reference="NNb-1f-Lc3"/>
                                 <include reference="0Tf-Qt-TZu"/>
                                 <include reference="79q-xH-W35"/>
+                                <include reference="GQX-KX-fq0"/>
+                                <include reference="5aJ-4i-XfB"/>
+                                <include reference="nhq-3H-2ra"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
                         <outlet property="blue_value" destination="79q-xH-W35" id="RMk-Dv-19z"/>
                         <outlet property="bmi_label" destination="ldg-r4-vRN" id="NMq-ys-Bzp"/>
+                        <outlet property="change_speed_slider" destination="5aJ-4i-XfB" id="6au-Wl-2JP"/>
                         <outlet property="counter_label" destination="Cr5-MM-qWm" id="rVe-vg-4rz"/>
                         <outlet property="gewicht_label" destination="Dvc-gl-xbr" id="5qN-SO-8Ny"/>
                         <outlet property="gewicht_slider" destination="WI6-fZ-g2a" id="CJU-U3-WMo"/>
@@ -224,6 +259,7 @@
                         <outlet property="slider_blue" destination="DxQ-XU-rZd" id="xv1-BS-JDx"/>
                         <outlet property="slider_green" destination="vE5-f1-1Tv" id="6ih-6D-xiT"/>
                         <outlet property="slider_red" destination="kFL-Tk-qdR" id="yCV-pm-xfL"/>
+                        <outlet property="speed_label" destination="nhq-3H-2ra" id="Zvi-4G-d4a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
