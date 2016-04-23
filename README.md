@@ -85,9 +85,9 @@ Implement one of the following examples or an idea of your own. I look forward t
 
 ## Hall of Fame
 
-- [Max, SS 2016](https://github.com/max-simon/SimpleUI):
+- [Richard, SS 2016](https://github.com/richardboell/SimpleUI):
 
-	![Max, SS 2016](https://ios-dev-kurs.github.io/halloffame/simpleui/ss2016_max.png)
+	![Richard, SS 2016](https://ios-dev-kurs.github.io/halloffame/simpleui/ss2016_richard.png)
 
 - [Marvin, SS 2016](https://github.com/marvinruder/SimpleUI):
 

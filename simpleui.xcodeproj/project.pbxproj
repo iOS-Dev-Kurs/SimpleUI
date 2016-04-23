@@ -14,6 +14,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		87368AE01CCBC1080099DED3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		873D8B651AAA4BF60058BC00 /* SimpleUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8750F1331CC241B90097E166 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = simpleui/Info.plist; sourceTree = SOURCE_ROOT; };
 		8750F1341CC241C50097E166 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = "Launch Screen.storyboard"; path = "simpleui/Launch Screen.storyboard"; sourceTree = SOURCE_ROOT; };
@@ -36,6 +37,7 @@
 		873D8B5C1AAA4BF60058BC00 = {
 			isa = PBXGroup;
 			children = (
+				87368AE01CCBC1080099DED3 /* README.md */,
 				873D8B671AAA4BF60058BC00 /* SimpleUI */,
 				873D8B661AAA4BF60058BC00 /* Products */,
 			);
