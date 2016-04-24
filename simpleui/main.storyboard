@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,11 +16,159 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b5d-HH-K7p">
+                                <rect key="frame" x="224" y="368" width="152" height="31"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="random timer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h0e-ph-nVF">
+                                        <rect key="frame" x="0.0" y="0.0" width="103" height="31"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Cxy-Ub-9Tm">
+                                        <rect key="frame" x="103" y="0.0" width="51" height="31"/>
+                                        <animations/>
+                                        <connections>
+                                            <action selector="switchValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="ON4-vB-5hY"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                                <animations/>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BS3-Yy-ycK">
+                                <rect key="frame" x="189" y="207" width="223" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="G" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rGR-ww-Adc">
+                                        <rect key="frame" x="0.0" y="0.0" width="13" height="30"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="K0v-aO-P0H">
+                                        <rect key="frame" x="11" y="0.0" width="214" height="31"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="210" id="6hC-RU-UFD"/>
+                                            <constraint firstAttribute="height" constant="30" id="O0j-Ab-xp9"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="ColorChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="1C3-n5-w8z"/>
+                                        </connections>
+                                    </slider>
+                                </subviews>
+                                <animations/>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="OLi-DL-NZh">
+                                <rect key="frame" x="190" y="251" width="221" height="30"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o8a-gq-nGp">
+                                        <rect key="frame" x="0.0" y="0.0" width="221" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="B" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BIb-Rw-aUW">
+                                                <rect key="frame" x="0.0" y="0.0" width="11" height="30"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="aDR-zh-vsK">
+                                                <rect key="frame" x="9" y="0.0" width="214" height="31"/>
+                                                <animations/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="Bfi-Bg-vob"/>
+                                                    <constraint firstAttribute="width" constant="210" id="HZa-fQ-pVa"/>
+                                                </constraints>
+                                                <connections>
+                                                    <action selector="ColorChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="dGz-cY-cgS"/>
+                                                </connections>
+                                            </slider>
+                                        </subviews>
+                                        <animations/>
+                                    </stackView>
+                                </subviews>
+                                <animations/>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lkn-tF-khx">
+                                <rect key="frame" x="249" y="277" width="102" height="46"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="random"/>
+                                <connections>
+                                    <action selector="randomButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sgg-DA-iEA"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jGr-ot-BR5">
+                                <rect key="frame" x="190" y="162" width="221" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uqy-Ja-0sE">
+                                        <rect key="frame" x="0.0" y="0.0" width="11" height="30"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ldq-nW-nYH">
+                                        <rect key="frame" x="9" y="0.0" width="214" height="31"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="CZ8-AK-4aU"/>
+                                            <constraint firstAttribute="width" constant="210" id="aDg-R6-jcE"/>
+                                            <constraint firstAttribute="height" constant="30" id="rMF-zt-lUN"/>
+                                            <constraint firstAttribute="width" constant="114" id="zL8-8P-rDU"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="CZ8-AK-4aU"/>
+                                                <exclude reference="zL8-8P-rDU"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <action selector="ColorChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="vOY-el-99v"/>
+                                        </connections>
+                                    </slider>
+                                </subviews>
+                                <animations/>
+                            </stackView>
+                        </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="OLi-DL-NZh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-34" id="Bc2-Qj-xJI"/>
+                            <constraint firstItem="Lkn-tF-khx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="50" id="EBN-wp-r0b"/>
+                            <constraint firstItem="Lkn-tF-khx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HZb-7W-glG"/>
+                            <constraint firstItem="BS3-Yy-ycK" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-78" id="I0d-Ob-yu7"/>
+                            <constraint firstItem="Lkn-tF-khx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ItK-SV-kuU"/>
+                            <constraint firstItem="BS3-Yy-ycK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QSo-Xf-jhL"/>
+                            <constraint firstItem="Lkn-tF-khx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="c6u-06-Kdm"/>
+                            <constraint firstItem="Lkn-tF-khx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cji-8X-OXp"/>
+                            <constraint firstItem="b5d-HH-K7p" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="46.5" id="fsQ-jP-HOg"/>
+                            <constraint firstItem="jGr-ot-BR5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hep-mX-rhL"/>
+                            <constraint firstItem="Lkn-tF-khx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="o1O-lx-f6N"/>
+                            <constraint firstItem="jGr-ot-BR5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-116" id="oTR-Rl-rJh"/>
+                            <constraint firstItem="OLi-DL-NZh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qDf-hk-JA1"/>
+                            <constraint firstItem="b5d-HH-K7p" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="6" id="xvl-6B-bZZ"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="EBN-wp-r0b"/>
+                                <exclude reference="c6u-06-Kdm"/>
+                                <exclude reference="cji-8X-OXp"/>
+                                <exclude reference="o1O-lx-f6N"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="bslider" destination="aDR-zh-vsK" id="Xwt-Tr-B2e"/>
+                        <outlet property="gslider" destination="K0v-aO-P0H" id="atM-qn-rLw"/>
+                        <outlet property="rslider" destination="ldq-nW-nYH" id="ek8-9c-M6r"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="305" y="389"/>
         </scene>
     </scenes>
 </document>
