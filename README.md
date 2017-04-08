@@ -45,7 +45,7 @@ Implement one of the following examples or an idea of your own. I look forward t
 	class ViewController: UIViewController {
 
 	    var count: Int = 0
-	
+
 		// ...
 
 	}
@@ -68,11 +68,11 @@ Implement one of the following examples or an idea of your own. I look forward t
 - When a `UISwitch` is tapped by the user it emits an Event `UIControlEvent.ValueChanged`, very similar to a `UIButton`. With an attribute `var: randomTimer: NSTimer?` we can implement a method for randomly changing the background color:
 
 	```swift
-	var randomTimer: NSTimer?
+	var randomTimer: Timer?
 
 	@IBAction func switchValueChanged(sender: UISwitch) {
 		if sender.on {
-			randomTimer = NSTimer.scheduledTimerWithTimeInterval(0.15, target: self, selector: "randomButtonPressed:", userInfo: nil, repeats:true)
+			randomTimer = Timer.scheduledTimer(timeInterval: 0.15, target: self, selector: #selector(randomButtonPressed(_:)), userInfo: nil, repeats: true)
 	    } else {
 	        randomTimer?.invalidate()
 	        randomTimer = nil
@@ -80,7 +80,7 @@ Implement one of the following examples or an idea of your own. I look forward t
 	}
 	```
 
-	This periodically calls the method `randomButtonPressed(_:) that must also be implemented.`
+	This periodically calls the method `randomButtonPressed(_:)` that must also be implemented.
 
 
 ## Hall of Fame

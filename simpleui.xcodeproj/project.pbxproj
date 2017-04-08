@@ -104,6 +104,7 @@
 				TargetAttributes = {
 					873D8B641AAA4BF60058BC00 = {
 						CreatedOnToolsVersion = 6.1.1;
+						LastSwiftMigration = 0830;
 					};
 				};
 			};
@@ -236,6 +237,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "de.uni-heidelberg.ios-dev-kurs.SimpleUI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -247,6 +249,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.uni-heidelberg.ios-dev-kurs.SimpleUI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
