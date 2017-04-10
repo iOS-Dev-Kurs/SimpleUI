@@ -9,6 +9,44 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var gewichtTextfield: UITextField!
+    @IBOutlet weak var größeTextfield: UITextField!
+    
+    @IBOutlet weak var setBMI: UILabel!
+    
+    @IBAction func buttonPressed(_ sender: Any) {
+        
+        
+        guard let gewichttext=gewichtTextfield.text else {
+            return
+        }
+        
+        guard let größetext=größeTextfield.text else {
+            return
+        }
+        
+        guard let gewicht = Double(gewichttext)
+            else {
+                return}
+        
+        guard let größe = Double(größetext)
+            else {
+                return}
+        
+        let bmi = gewicht/pow(größe,2)
+        
+        
+      
+        setBMI.text = "BMI \(bmi)"
+   
+    
+    }
+    
+   
+    
+    
+    
+    
 }
 
